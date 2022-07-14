@@ -1,17 +1,36 @@
-.container {
-    margin-top: 5rem;
-    text-align: center;
-    padding: 1rem;
-    border: 1rem;
-    border-style: solid;
-    border-color: aqua;
-    border-radius: 1rem;
+html{
+    font-family:Arial, Helvetica, sans-serif
 }
-
-.btn{
-    
-    border-style: groove;
+body {
+  background-image: url("img/pexels-cottonbro-4720385.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+.container {
+  margin-top: 28rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.5rem 0.2rem 0.2rem black;
+}
+div{
+    background-color: aliceblue;
+}
+.btn {
+  border-style: none;
+  color: aliceblue;
+  background-color: rgb(64, 215, 215);
+  border-radius: 0.4rem;
+  width: 15rem;
+  padding: 2%;
+  margin-bottom: 1rem;
+}
+.btn:hover{
+    background-color: blueviolet;
+    border-style: solid;
+    border-top: 0.2rem;
+    border-left: 0.1rem;
     border-color: black;
-    background-color: aqua;
-    border-radius: 1rem;
 }
