@@ -1,5 +1,5 @@
-html{
-    font-family:Arial, Helvetica, sans-serif
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
   background-image: url("img/pexels-cottonbro-4720385.jpeg");
@@ -9,30 +9,49 @@ body {
   background-size: cover;
 }
 .container {
-  margin-top: 28rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0.2rem 0.5rem 0.2rem 0.2rem black;
 }
-div{
-    background-color: aliceblue;
+div {
+  background-color: aliceblue;
 }
 .btn {
   border-style: none;
   color: aliceblue;
+  font-size: x-large;
   background-color: rgb(64, 215, 215);
   border-radius: 0.4rem;
   width: 15rem;
   padding: 2%;
   margin-bottom: 1rem;
 }
-.btn:hover{
-    background-color: blueviolet;
-    border-style: solid;
-    border-top: 0.2rem;
-    border-left: 0.1rem;
-    border-color: black;
+.btn:hover {
+  background-color: blueviolet;
+  border-style: solid;
+  border-top: 0.2rem;
+  border-left: 0.1rem;
+  border-color: black;
 }
-
-
+.btn2 {
+  border-style: none;
+  color: aliceblue;
+  background-color: rgb(64, 215, 215);
+  border-radius: 0.2rem;
+  width: 5rem;
+  margin: 1rem;
+}
+.btn2:hover {
+  background-color: blueviolet;
+  border-style: solid;
+  border-top: 0.2rem;
+  border-left: 0.1rem;
+  border-color: black;
+}
+#joke {
+  font-size:medium;
+}
