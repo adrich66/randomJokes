@@ -9,6 +9,7 @@ body {
   background-size: cover;
 }
 .container {
+  background-color: aliceblue;
   margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -17,9 +18,7 @@ body {
   border-radius: 1rem;
   box-shadow: 0.2rem 0.5rem 0.2rem 0.2rem black;
 }
-div {
-  background-color: aliceblue;
-}
+
 .btn {
   border-style: none;
   color: aliceblue;
@@ -54,4 +53,8 @@ div {
 }
 #joke {
   font-size:medium;
+}
+.weather{
+  font-size:xx-large;
+  text-align: left;
 }
