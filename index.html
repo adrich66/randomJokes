@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <main>
-      <div id="weather">30º | Barcelona</div>
-      <div class="container">
+    <header>
+      <span id="weather">0</span>
+      <span>º |</span>
+      <span id="location">Location</span>
+    </header> 
+    <main class="container">
       <div>
-        <h2>🤪 Jokes & LOL 🤪</h2>
+        <h2>🤪 Jokes & LOL</h2>
       </div>
       <div>
         <p id="joke"></p>
@@ -24,8 +27,7 @@
       <div>
         <input type="button" id="start" class="btn" value="Start" onclick="getJokes()" ></input>
       </div> 
-    </div>
-  </main>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 const API_URL = 'https://icanhazdadjoke.com/';
 const API_CHUCK = 'https://api.chucknorris.io/jokes/random';
-const API_WEATHER = 'https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=imperial&mode=xml';
 const spaceForJoke = document.getElementById("joke");
 const reportJokes = [];
 
@@ -45,6 +44,29 @@ function trackingJokes(number){
     console.log(reportJokes);
 }
 
+window.addEventListener('load', () => {
+    let lat, lon;
+    let weather = document.getElementById('weather');
+    let location = document.getElementById('location');
 
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition( position => {
+            lat = position.coords.latitude
+            lon = position.coords.longitude
+            const API_WEATHER = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4926b67bf37408016b1e93374ad7f02a`;
+            console.log(API_WEATHER);
 
+            fetch (API_WEATHER)
+                .then(response => { return response.json()})
+                .then(data => {
+                    let temp = Math.round((data.main.temp) - 273.15)
+                    weather.innerHTML = temp
+                    location.innerHTML = (data.name)
+                })
+                .catch( error => {
+                    console.log(error)
+                })
+        })
+    }
+})
 

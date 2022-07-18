@@ -34,27 +34,46 @@ body {
   border-style: solid;
   border-top: 0.2rem;
   border-left: 0.1rem;
-  border-color: black;
+ border-style: hidden;
+  margin-bottom: 1rem;
 }
 .btn2 {
   border-style: none;
-  color: aliceblue;
-  background-color: rgb(64, 215, 215);
+  background-color: aliceblue;;
   border-radius: 0.2rem;
   width: 5rem;
   margin: 1rem;
 }
 .btn2:hover {
   background-color: blueviolet;
-  border-style: solid;
-  border-top: 0.2rem;
-  border-left: 0.1rem;
-  border-color: black;
+  border-radius: 100%;
+  border-style:hidden;
+  margin: 0.5rem;
 }
 #joke {
   font-size:medium;
 }
-.weather{
-  font-size:xx-large;
-  text-align: left;
+header{
+  margin-left: 0.1rem;
+  font-size:x-large;
+}
+@media (max-width: 480px){
+  
+  header{
+    text-align: center;
+    width: 14rem;
+    padding: 1rem;
+    border-color: rgb(64, 215, 215);
+    border-radius: 100%;
+    color: aliceblue;
+  
+    background-color:rgb(64, 215, 215);
+  }
+  .btn{
+    width: auto;
+  }
+  .btn2{
+    background-color: aliceblue;
+    width: auto;
+  }
 }
