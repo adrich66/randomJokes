@@ -1,4 +1,4 @@
-*{
+* {
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
@@ -10,13 +10,24 @@ body {
 }
 .container {
   background-color: aliceblue;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0.2rem 0.5rem 0.2rem 0.2rem black;
+  box-shadow: 0.1rem 0.3rem 0.1rem 0.1rem black;
+  max-width: 30rem;
+}
+#icon {
+  margin-top: 0.4rem;
+}
+.flex-container {
+  display: flex;
+  margin-bottom: auto;
+  align-items: center;
+}
+.flex-container div {
+  margin: 0.2rem;
 }
 .btn {
   border-style: none;
@@ -27,6 +38,7 @@ body {
   width: 15rem;
   padding: 2%;
   margin-bottom: 1rem;
+  box-shadow: 0.1rem 0.3rem 0.1rem 0.1rem black;
 }
 .btn:hover {
   background-color: rgb(107, 54, 185);
@@ -38,7 +50,7 @@ body {
 }
 .btn2 {
   border-style: none;
-  background-color: aliceblue;;
+  background-color: aliceblue;
   border-radius: 0.2rem;
   width: 5rem;
   margin: 1rem;
@@ -46,37 +58,40 @@ body {
 .btn2:hover {
   background-color: rgb(212, 181, 55);
   border-radius: 100%;
-  border-style:hidden;
+  border-style: hidden;
   margin: 1rem;
 }
 #joke {
-  font-size:medium;
+  font-size: medium;
 }
-header{
+header {
   margin-left: 0.1rem;
-  font-size:x-large;
+  font-size: x-large;
   color: aliceblue;
 }
 
-@media (max-width: 480px){
-  
-  header{
+@media (max-width: 600px) {
+  header {
+    background-color: aliceblue;
+    justify-content: center;
+    margin: 2rem auto;
     text-align: center;
-    align-items: center;
-    margin: 5% 15%;
-    width: auto;
     padding: 1rem;
-    border-color: rgb(64, 215, 215);
-    border-radius: 10%;
-    color: aliceblue;
-  
-    background-color:rgb(64, 215, 215);
+    border-radius: 1rem;
+    color: black;
+    max-width: 30rem;
+    box-shadow: 0.1rem 0.3rem 0.1rem 0.1rem black;
   }
-  .btn{
+  .btn {
     width: auto;
   }
-  .btn2{
+  .btn2 {
     background-color: aliceblue;
     width: auto;
+  }
+}
+@media (max-width: 300px) {
+  .flex-container div {
+    font-size: small;
   }
 }
