@@ -59,38 +59,9 @@ window.addEventListener('load', () => {
             fetch (API_WEATHER)
                 .then(response => { return response.json()})
                 .then(data => {
-                    weather.innerHTML = Math.round((data.main.temp) - 273.15)
+                    weather.innerHTML = `${Math.round((data.main.temp) - 273.15)}ºC`
                     location.innerHTML = (data.name)
-                    switch (data.weather[0].main){
-                        case 'Clear':
-                        icon.src = 'img/day.svg'
-                        break;
-                        case 'Thunderstorm':
-                        icon.src = 'img/thunder.svg'
-                        break;
-                        case 'Drizzle':
-                        icon.src = 'img/rainy-2.svg'
-                        break;
-                        case 'Rain':
-                        icon.src = 'img/rainy-7.svg'
-                        break;
-                        case 'Snow':
-                        icon.src = 'img/snowy-6.svg'
-                        break;
-                        case 'Atmosphere':
-                        icon.src = 'img/weather.svg'
-                        break;
-                        case 'Clouds':
-                        icon.src = 'img/cloudy-day-2.svg'
-                        case 'Fog':
-                            icon.src = 'img/mist-svgrepo-com.svg'
-                        break;
-                        case 'Mist':
-                            icon.src = 'img/mist-svgrepo-com.svg'
-                        break;
-                        default:
-                            icon.scr='img/cloudy-day-1.svg'
-                    }
+                    icon.src = `./img/${(data.weather[0].main)}.svg`
                 })
                 .catch( error => {
                     console.log(error)

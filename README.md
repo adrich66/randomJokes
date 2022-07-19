@@ -1,4 +1,4 @@
-\\\\ONLY IN CATALAN////
+\\\\ONLY IN CATALAN//
 
 
 Crearem una web d'acudits, consumint dades d'una API gratuïta que no requereix clau. Veuràs que és molt divertit i interessant poder aconseguir dades d'una API, imagina la quantitat de webs que pots fer!
