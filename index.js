@@ -22,7 +22,7 @@ async function getJokes(){
     spaceForJoke.innerHTML = jokes.joke;
     if (randomNum === 0) spaceForJoke.innerHTML = jokes.value;
     
-    document.getElementById("buttons").innerHTML = '<button class="btn2" onclick="getJokes(); trackingJokes(1);"><h1>😓</h1></button><button class="btn2" onclick="getJokes(); trackingJokes(2);"><h1>😐</h1></button><button class="btn2" onclick="getJokes(); trackingJokes(3);"><h1>😆</h1></button>';
+    document.getElementById("buttons").innerHTML = '<button class="btn2" onclick="getJokes(); trackingJokes(1);"><img src="img/iconmonstr-smiley-4.svg" id="face-bad" alt="img-bad" height="80" width="80"></button><button class="btn2" onclick="getJokes(); trackingJokes(2);"><img src="img/iconmonstr-smiley-6.svg" id="face-bad" alt="img-face" height="80" width="80"></button><button class="btn2" onclick="getJokes(); trackingJokes(3);"><img src="img/iconmonstr-smiley-9.svg" id="face-good" alt="img-good" height="80" width="80"></button>';
 } 
 
 document.getElementById("start").addEventListener("click",function(){
@@ -59,9 +59,38 @@ window.addEventListener('load', () => {
             fetch (API_WEATHER)
                 .then(response => { return response.json()})
                 .then(data => {
-                    let temp = Math.round((data.main.temp) - 273.15)
-                    weather.innerHTML = temp
+                    weather.innerHTML = Math.round((data.main.temp) - 273.15)
                     location.innerHTML = (data.name)
+                    switch (data.weather[0].main){
+                        case 'Clear':
+                        icon.src = 'img/day.svg'
+                        break;
+                        case 'Thunderstorm':
+                        icon.src = 'img/thunder.svg'
+                        break;
+                        case 'Drizzle':
+                        icon.src = 'img/rainy-2.svg'
+                        break;
+                        case 'Rain':
+                        icon.src = 'img/rainy-7.svg'
+                        break;
+                        case 'Snow':
+                        icon.src = 'img/snowy-6.svg'
+                        break;
+                        case 'Atmosphere':
+                        icon.src = 'img/weather.svg'
+                        break;
+                        case 'Clouds':
+                        icon.src = 'img/cloudy-day-2.svg'
+                        case 'Fog':
+                            icon.src = 'img/mist-svgrepo-com.svg'
+                        break;
+                        case 'Mist':
+                            icon.src = 'img/mist-svgrepo-com.svg'
+                        break;
+                        default:
+                            icon.scr='img/cloudy-day-1.svg'
+                    }
                 })
                 .catch( error => {
                     console.log(error)

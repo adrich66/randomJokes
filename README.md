@@ -1,4 +1,6 @@
-**ONLY IN CATALAN**
+\\\\ONLY IN CATALAN////
+
+
 Crearem una web d'acudits, consumint dades d'una API gratuïta que no requereix clau. Veuràs que és molt divertit i interessant poder aconseguir dades d'una API, imagina la quantitat de webs que pots fer!
 
 En l'àmbit professional, quan treballis en un projecte, l'empresa normalment té un back end amb una documentació per a poder obtenir les dades. Sovint, una web o app no només té una font de dades, també és comú utilitzar APIs de tercers. Resumint, saber consumir dades d'una API és una de les skills més importants d'un programador/a front end!
